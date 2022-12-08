@@ -1,1 +1,31 @@
 <app-nav></app-nav>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <h2>EMPLOYEES</h2>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table table-borderless">
+                      <thead>
+                        <tr>
+                          <th scope="col">Name</th>
+                          <th scope="col">Admission No.</th>
+                          <th scope="col">Roll No.</th>
+                          <th scope="col">College</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let i of data" >
+                          <td>{{i.name}}</td>
+                          <td>{{i.admno}}</td>
+                          <td>{{i.rollno}}</td>
+                          <td>{{i.college}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
