@@ -7,6 +7,24 @@ import { AddComponent } from './add/add.component';
 import { ViewComponent } from './view/view.component';
 import { SearchComponent } from './search/search.component';
 import { NavComponent } from './nav/nav.component';
+import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from "@angular/common/http";
+
+const myRoute:Routes=[
+  {
+    path:"",
+    component:AddComponent
+  },
+  {
+    path:"/view",
+    component:ViewComponent
+  },
+  {
+    path:"/search",
+    component:SearchComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -18,7 +36,10 @@ import { NavComponent } from './nav/nav.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    RouterModule.forRoot(myRoute),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
