@@ -17,11 +17,11 @@ const myRoute:Routes=[
     component:AddComponent
   },
   {
-    path:"/view",
+    path:"view",
     component:ViewComponent
   },
   {
-    path:"/search",
+    path:"search",
     component:SearchComponent
   }
 ]
